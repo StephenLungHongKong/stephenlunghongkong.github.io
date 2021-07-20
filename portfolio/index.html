@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>    
+    <div class="container">
+        <div class="card">
+            <div class="ctrlbtn"> 
+                <button class = "closebtn" onclick="aboutMe()">
+                    <span>?</span>
+                </button>
+            </div>
+            <div class="hm10">
+                <div class="circle"></div>
+                <img src="./pics/KS0455.png" alt="adidas">
+            </div>
+            <div class="info">
+                <h1 class="title">Stephen Lung</h1>
+                <h3>Graduate in Bachelor Degree of I.T. focus on algorithm, embedded system and software development. </h3>
+                
+                <h5>Some of my projects.</h5>
+                
+                <div class="projects">
+                    <button onclick="goMobile()">
+                        <a href="./mobileapp.html">Mobile Web App</a>
+                    </button>
+                    <button onclick="goEmbedded()">
+                        <a href="./embeddedsys.html">Embedded Sys</a>
+
+                    </button>
+                    <button onclick="goVue()">
+                        <a href="./vuejs.html"> VueJS Demo</a>
+                    </button>
+                    <button onclick="goVba()">
+                        <a href="./gamedev.html">Game Dev</a>
+                    </button>
+                </div>
+                <div class="contactemail">
+                    <button data-hover="email me!"><div>Contact</div></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>

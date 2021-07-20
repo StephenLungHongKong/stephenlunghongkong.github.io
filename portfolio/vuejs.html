@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="ctrlbtn"> 
+                <button class = "closebtn" onclick="goBack()">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="info">
+                <br>
+                <h1 class="title">Vue JS</h1>
+                <h3>Example on the use of Vue JS.
+                </h3>
+                <h5>Technology: Vue, Promise</h5>
+                <h5>Language: Vue, JavaScript, HTML, CSS</h5>
+                <div id="app">
+                    <hr>
+                    <table>
+                        <tr>
+                            <th colspan="3"> {{message}} </th>
+                        </tr>
+                        <tr>
+                            <td><img v-on:click= "gclick(0)" :src = "grid(0)"></td>
+                            <td><img v-on:click= "gclick(1)" :src = "grid(1)"></td>
+                            <td><img v-on:click= "gclick(2)" :src = "grid(2)"></td>
+                        </tr>
+                        <tr>
+                            <td><img v-on:click= "gclick(3)" :src = "grid(3)"></td>
+                            <td><img v-on:click= "gclick(4)" :src = "grid(4)"></td>
+                            <td><img v-on:click= "gclick(5)" :src = "grid(5)"></td>
+                        </tr>            
+                        <tr>
+                            <td><img v-on:click= "gclick(6)" :src = "grid(6)"></td>
+                            <td><img v-on:click= "gclick(7)" :src = "grid(7)"></td>
+                            <td><img v-on:click= "gclick(8)" :src = "grid(8)"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                
+                <div class="back">
+                    <button  onclick="goBack()"><a href="./index.html"> Back</a></button>
+                </div>
+            </div>
+        </div>       
+    </div>
+    <script src="./scripts/projectpages.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    
+    <script src="./scripts/tictactoe.js"></script>
+    
+</body>
+</html>

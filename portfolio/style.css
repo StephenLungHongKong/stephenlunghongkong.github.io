@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  transform-style: preserve-3d;
+  background-color:rgb(238, 224, 160);
+  min-height: 80vh;
+  width: 35rem;
+  border-radius: 50px;
+  padding: 0rem 5rem;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+.ctrlbtn{
+  display: flex;
+  justify-content: space-between;
+
+
+}
+.closebtn{
+  margin-left: 25rem;
+  padding: .6rem .8rem;
+  background: none;
+  background-color: rgba(204, 17, 17, 0.75);
+  border: none;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #f0efef;
+}
+.ctrlbtn :hover{
+  background-color: rgb(230, 72, 72);
+  color:rgb(218, 167, 167) ;
+}
+.closebtn :hover{
+  color: rgb(110, 6, 6);
+}
+
+.hm10 {
+  min-height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hm10 img {
+  width: 20rem;
+  z-index: 2;
+  transition: all 0.75s ease-out;
+}
+.circle {
+  width: 13rem;
+  height: 13rem;
+  background: linear-gradient(
+    to right,
+    rgba(253, 237, 0, 0.75),
+    rgba(4,46,160, 0.75)
+  );
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.info h1 {
+  font-size: 2rem;
+  transition: all 0.75s ease-out;
+}
+.info h3 {
+  font-size: 1.3rem;
+  padding: 1rem 0rem;
+  color: #585858;
+  font-weight: lighter;
+  transition: all 0.75s ease-out;
+}
+.info h5{
+  font-size: 0.8rem;
+  padding: 1rem 0rem;
+  color: #585858;
+  text-align: center;
+  transition: all 0.75s ease-out;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.75s ease-out;
+}
+.projects button {
+  margin-right: 0.3rem;
+  padding: 1rem 1rem;
+  background: none;
+  background-color: rgba(119, 126, 144, 0.75);
+  border: none;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #585858;
+}
+.projects button a:link {
+  text-decoration: none;
+  color: #585858
+}
+
+.projects button a:visited {
+  text-decoration: none;
+  color: #585858
+}
+.projects button a:hover {
+  text-decoration: none;
+  color: rgb(219,220,220)
+}
+button:hover {
+  background: rgb(137,117,90);
+  color: rgb(219,220,220);
+}
+.contactemail {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  transition: all 0.75s ease-out;
+}
+.contactemail button {
+  width: 100%;
+  padding: 1rem 0rem;
+  background:     rgba(226, 211, 2, 0.918);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bolder;
+  overflow: hidden;
+}
+
+ /*button:before (attr data-hover)*/
+.contactemail button:hover:before{opacity: 1; transform: translate(0,0);}
+.contactemail button:before{
+    content: attr(data-hover);
+    position: absolute;
+    top: 1.1em; left: 0;
+    width: 100%;
+    letter-spacing: 3px;
+    font-weight: 800;
+    font-size: .8em;
+    opacity: 0;
+    transform: translate(-100%,0);
+    transition: all .3s ease-in-out;
+  }
+  /*button div (button text before hover)*/
+  .contactemail button:hover div{opacity: 0; transform: translate(100%,0)}
+  .contactemail button div{
+    letter-spacing: 3px;
+    font-weight: 800;
+    font-size: .8em;
+    transition: all .3s ease-in-out;
+  }
+
+  .back button {
+    width: 100%;
+    padding: 1rem 0rem;
+    background:     rgba(226, 211, 2, 0.918);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bolder;
+    overflow: hidden;
+  }
+  .back button a:link {
+    text-decoration: none;
+    color: #585858
+  }
+  
+  .back button a:visited {
+    text-decoration: none;
+    color: #585858
+  }
+  .back button a:hover {
+    text-decoration: none;
+    color: rgb(219,220,220)
+  }
+
+  .info img{
+    max-width: 100%;
+  }
