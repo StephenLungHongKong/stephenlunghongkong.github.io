@@ -56,3 +56,17 @@ function goVba(){
 function aboutMe(){
   location.replace('./about.html')
 }
+
+if (
+  DeviceMotionEvent &&
+  typeof DeviceMotionEvent.requestPermission === "function"
+) {
+  DeviceMotionEvent.requestPermission();
+}
+
+//Moving Animation Event
+container.addEventListener("deviceorientation", (e) => {
+  let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+  let yAxis = (window.innerHeight / 1.5 - e.pageY) / 25;
+  card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+});
