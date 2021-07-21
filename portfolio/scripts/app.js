@@ -66,7 +66,7 @@ if (
 
 //Moving Animation Event
 container.addEventListener("deviceorientation", (e) => {
-  let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
-  let yAxis = (window.innerHeight / 1.5 - e.pageY) / 25;
+  let xAxis = window.innerWidth*( 0.5 - e.beta/90) / 25;
+  let yAxis = window.innerHeight*( 0.67 - (e.alpha+45)/90) / 25;
   card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
 });
