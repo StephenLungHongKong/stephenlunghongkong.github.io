@@ -58,10 +58,10 @@ if (mobileAndTabletCheck()) {
 
   //Moving Animation Event
   addEventListener("deviceorientation", (e) => {
-    let xAxis = (e.beta+10)%30;
-    let yAxis = e.alpha%15;
+    let xAxis = (e.beta+5)%30;
+    let yAxis = 7- e.alpha%15;
     card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-    myname.innerHTML = xAxis+ yAxis;
+    myname.innerHTML = String(xAxis) + ":" + String(yAxis);
   
   });
 
