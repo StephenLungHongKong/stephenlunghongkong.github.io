@@ -58,8 +58,8 @@ if (mobileAndTabletCheck()) {
 
   //Moving Animation Event
   container.addEventListener("deviceorientation", (e) => {
-    let xAxis = window.innerWidth*( 0.5 - e.beta/90) / 25;
-    let yAxis = window.innerHeight*( 0.67 - (e.alpha+45)/90) / 25;
+    let xAxis = e.beta;
+    let yAxis = e.alpha;
     card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
     myname.innerHTML = xAxis;
   
