@@ -51,11 +51,22 @@ window.mobileAndTabletCheck = function() {
 
 if (mobileAndTabletCheck()) {
   console.log('mobile device');
+
+  card.style.transition = "none";
+  //Popout
+  title.style.transform = "translateZ(150px)";
+  sneaker.style.transform = "translateZ(200px) rotateZ(-30deg)";
+  description.style.transform = "translateZ(125px)";
+  projecthead.style.transform = "translateZ(125px)";
+  projects.style.transform = "translateZ(100px)";
+  contactemail.style.transform = "translateZ(75px)";
+
   //Moving Animation Event
   container.addEventListener("deviceorientation", (e) => {
     let xAxis = window.innerWidth*( 0.5 - e.beta/90) / 25;
     let yAxis = window.innerHeight*( 0.67 - (e.alpha+45)/90) / 25;
     card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+  
   });
 
 }else{
