@@ -45,8 +45,6 @@ window.mobileAndTabletCheck = function() {
 };
 
 if (mobileAndTabletCheck()) {
-  let myname = document.querySelector('.info h1');
-  myname.innerHTML = 'Mobile Version'
   card.style.transition = "none";
   //Popout
   title.style.transform = "translateZ(150px)";
@@ -59,9 +57,8 @@ if (mobileAndTabletCheck()) {
   //Moving Animation Event
   addEventListener("deviceorientation", (e) => {
     let xAxis = (e.gamma / 10 - 15) % 30;
-    let yAxis = (e.beta / 5 + 5) % 25;
+    let yAxis = (e.beta / 5 + 8) % 25;
     card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-    myname.innerHTML = String(Math.round(xAxis)) + ":" + String(Math.round(yAxis));
   
   });
 
