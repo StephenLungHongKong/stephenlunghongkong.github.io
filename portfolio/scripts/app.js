@@ -57,7 +57,7 @@ if (mobileAndTabletCheck()) {
   contactemail.style.transform = "translateZ(75px)";
 
   //Moving Animation Event
-  container.addEventListener("deviceorientation", (e) => {
+  addEventListener("deviceorientation", (e) => {
     let xAxis = e.beta;
     let yAxis = e.alpha;
     card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
