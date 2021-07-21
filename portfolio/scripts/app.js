@@ -37,11 +37,6 @@ if (
 }
 
 //Moving Animation Event
-container.addEventListener("deviceorientation", (e) => {
-  let xAxis = window.innerWidth*( 0.5 - e.beta/90) / 25;
-  let yAxis = window.innerHeight*( 0.67 - (e.alpha+45)/90) / 25;
-  card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-});
 
 window.mobileAndTabletCheck = function() {
   let check = false;
@@ -50,8 +45,8 @@ window.mobileAndTabletCheck = function() {
 };
 
 if (mobileAndTabletCheck()) {
-  console.log('mobile device');
-
+  let myname = document.querySelector('.info h1');
+  myname.innerHTML = 'Mobile Version'
   card.style.transition = "none";
   //Popout
   title.style.transform = "translateZ(150px)";
@@ -66,11 +61,11 @@ if (mobileAndTabletCheck()) {
     let xAxis = window.innerWidth*( 0.5 - e.beta/90) / 25;
     let yAxis = window.innerHeight*( 0.67 - (e.alpha+45)/90) / 25;
     card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+    myname.innerHTML = xAxis;
   
   });
 
 }else{
-  console.log('Not a mobile');
   //Moving Animation Event
   container.addEventListener("mousemove", (e) => {
     let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
